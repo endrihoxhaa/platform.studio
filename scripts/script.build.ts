@@ -5,6 +5,6 @@ await tsup.build({
   outDir: 'dist',
   dts: true,
   format: ['esm'],
-  platform: 'neutral',
-  external: ['react', "reflect-metadata", "platform"],
+  platform: 'browser',
+  external: ['react', "react-dom"],
 })

@@ -1,5 +1,6 @@
 import { Route } from './Route'
 
 export interface Guard {
-  canView(route: Route): Promise<{ canView: boolean; path: string }>
+  redirectTo: string | null
+  canView(route: Route): Promise<boolean>
 }

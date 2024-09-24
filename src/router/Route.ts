@@ -3,8 +3,10 @@ import { Guard } from "./Guard"
 import { Interceptor } from "./Interceptor"
 
 export interface Route {
-  route: string
-  guards: Guard[]
-  interceptors: Interceptor[]
+  path: string
+  location?: string
+  guards?: Guard[]
+  interceptors?: Interceptor[]
   view: View
+  params?: Record<string, string>
 }
